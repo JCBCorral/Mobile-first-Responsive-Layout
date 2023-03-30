@@ -1,0 +1,350 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+font-family: 'Edu NSW ACT Foundation', cursive;
+background-color: whitesmoke;
+max-width: 1024px;
+margin: 0 auto; 
+}
+
+
+/*Header and Navigation*/ 
+nav {
+    background-color: rgb(219, 225, 228);
+    margin-top: -20px;
+}
+
+h1  {
+    text-align: center;
+ }
+
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.main-nav {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 90%;
+    max-width: 400px;
+    padding-right: 5px;
+    margin-top: 1.5em;
+}
+
+.main-nav a {
+    display: block;
+    color: black;
+    font-size: 20px;
+    text-align: center;
+    padding: .1em;
+    text-transform:uppercase;
+    list-style: none;
+}
+
+.main-nav a:hover {
+    color: firebrick;
+ } 
+
+ .main-nav li {
+    padding: 9px;
+    margin: 3px;
+    background-color: rgb(255, 253, 253);
+    width: 100%;
+ }
+
+/*End of Header and Navigation*/
+
+/*Main - Profile Picture*/
+.picture {
+    padding-top: 60px;
+    background-color:  rgb(219, 225, 228);
+}
+
+.picture-1 {
+    width: 50%;
+    margin: 0 auto;
+    padding-left: 10px;
+}
+
+.picture p {
+    padding: 26px;
+    text-align: center;
+    font-size: 1.5em;
+    line-height: 1.5em;
+}
+
+/*End of Main - Profile Picture*/
+
+/*Main - Portfolio, Images and Paragraphs*/
+.port {
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    text-transform: uppercase;
+}
+
+img {
+    width: 90%;
+    display: block;
+    margin: 0 auto;
+}
+
+h3  {
+    text-align: center;
+    padding-top: 30px;
+    font: 1.5em;
+}
+
+p {
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 20px;
+    font: 1.5em;
+    line-height: 1.6em;
+}
+
+/*End of Main - Portfolio*/
+
+/*Education and Skills Section for Extra Credit*/
+.education-1, .skills-1, .items, .items-1 {
+    font-family: 'Chewy', cursive;
+}
+
+.side {
+    color: firebrick;
+}
+
+.color {
+    border: 10px solid firebrick;
+    width: 95%;
+    margin: 15px;
+}
+
+.education-1 {
+    margin-top: 10px;
+}
+
+.education-1, .skills-1 {
+    text-align: center;
+    color: firebrick;
+}
+
+.items{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.skills-1 {
+    margin-top: 50px;
+}
+
+.items-1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.hero {
+    columns: 150px;
+    padding-left: 5px;
+    padding-right: 100px;
+    list-style: decimal;
+    color: firebrick;
+    border: 2px solid firebrick
+}
+
+.hero:hover {
+    background-color: bisque;
+
+}
+
+
+
+/*Education and Skills Section for Extra Credit End*/
+
+/*Footer*/
+.bottom {
+    background-color: rgb(219, 225, 228);
+    margin-top: 100px;
+}
+
+.bottom-1 {
+    text-transform: uppercase;
+}
+
+
+footer, .footer-nav {
+    display: flex;
+}
+
+footer {
+    justify-content: space-between;
+    padding-bottom: 30px;
+    border-top: 1px solid rgb(168, 175, 182);
+}
+.display {
+    display: none;
+}
+
+.top {
+    padding-right: 20px;
+    text-transform: uppercase;
+}
+
+footer h4 {
+    padding-left: 20px;   
+}
+
+.comm {
+    margin: -10px auto;
+}
+
+.comm-1 {
+    margin: -5px;
+    margin-bottom: 50px;
+}
+/*End of Footer*/
+
+
+
+/*Media Queries*/
+
+@media (min-width:768px) {
+    nav, .main-nav {
+        display: flex;
+        flex-direction: row;
+    }
+
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .main-nav {
+        margin: 0 0 16px;
+        padding-left: 200px;
+       
+    }
+
+    .main-nav li {
+        background-color: transparent;
+        width: auto;
+        margin: 0 10px;
+    }
+
+    .color {
+        margin-left: 25px;
+        margin-right: 50px;
+    }
+
+    .picture {
+        display: flex;
+        flex-direction: row;
+        padding-bottom: 50px;
+    }
+
+    .picture p {
+        order: -1;
+    }
+
+    .picture p {
+        padding: 0 25px 0 30px;
+        margin-top: 0;
+        font-size: 20px;
+    }
+
+    .picture-1 {
+        padding-right: 30px;
+        width: 330px;
+    }
+
+    .port {
+        padding-bottom: 40px;
+    }
+
+    .projects  {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .section {
+        flex: 1 50%;
+    }
+  
+    .top {
+        display: none;
+    }
+
+    .display {
+        display: inline-block;
+        margin-right: 20px;
+        padding-top: 20px;
+    }
+    footer {
+        text-transform: uppercase;
+    } 
+
+    footer h4 {
+        padding-left: 20px;
+    }
+
+
+}
+
+@media (min-width:1024px) { 
+    body {
+        background-color: rgb(219, 225, 228);
+    }
+    nav {
+        flex-direction: row;
+    }
+
+    h1 {
+        padding-right: 89px;
+    }
+
+    nav {
+        margin: 50px auto 20px 0;
+    }
+    
+    .picture {
+        width: 95%;
+    }
+
+
+    .section {
+        flex-basis: 33%;
+    }
+
+    .color {
+        margin-left: -2px;
+    }
+
+    .projects,
+    .section,
+    .port {
+        border: 10px solid rgb(255, 255, 255);
+        width: 95%;
+        margin: 0;
+        padding-bottom: 60px;
+        background-color:rgb(255, 255, 255);
+    }
+    
+    .section {
+        background-color: rgb(255, 255, 255);
+    }
+    
+    footer {
+        text-transform: uppercase;
+    } 
+
+}
