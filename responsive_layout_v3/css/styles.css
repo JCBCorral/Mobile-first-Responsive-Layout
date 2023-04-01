@@ -2,94 +2,83 @@
     box-sizing: border-box;
 }
 
-body{
-font-family: 'Edu NSW ACT Foundation', cursive;
-background-color: whitesmoke;
-max-width: 1024px;
-margin: 0 auto; 
-}
-
-
-/*Header and Navigation*/ 
-nav {
+body {
+    font-family: 'Edu NSW ACT Foundation', cursive;
     background-color: rgb(219, 225, 228);
-    margin-top: -20px;
+    max-width: 1024px;
+    margin: 0 auto; 
+    letter-spacing: 1px;
 }
-
-h1  {
-    text-align: center;
- }
-
 
 ul {
     list-style: none;
     padding-left: 0;
+    text-decoration: none;
 }
 
 a {
     text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: firebrick;
+}
+
+h1:hover {
+    color: burlywood;
+}
+
+/*NAVIGATION SECTION*/
+nav{
+    font-weight: 400;
+    padding: 30px;   
+}
+
+h1, .main-nav {
+    text-align: center;
+}
+.main-nav,
+.main-nav li {
+    width: 100%;
 }
 
 .main-nav {
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    width: 90%;
-    max-width: 400px;
-    padding-right: 5px;
-    margin-top: 1.5em;
+    margin-top: 25px;
+}
+
+.main-nav li {
+    padding: 18px 0;
+    margin: 5px auto;
+    background-color: white;
 }
 
 .main-nav a {
-    display: block;
-    color: black;
-    font-size: 20px;
-    text-align: center;
-    padding: .1em;
-    text-transform:uppercase;
-    list-style: none;
+    text-transform: uppercase;
 }
 
-.main-nav a:hover {
-    color: firebrick;
- } 
+/*END OF NAVIGATION SECTION*/
 
- .main-nav li {
-    padding: 9px;
-    margin: 3px;
-    background-color: rgb(255, 253, 253);
-    width: 100%;
- }
-
-/*End of Header and Navigation*/
-
-/*Main - Profile Picture*/
+/*MAIN - PROFILE SECTION*/
 .picture {
-    padding-top: 60px;
-    background-color:  rgb(219, 225, 228);
+    padding-top: 18px;
 }
 
 .picture-1 {
-    width: 50%;
+    width: 70%;
     margin: 0 auto;
-    padding-left: 10px;
 }
 
 .picture p {
-    padding: 26px;
+    padding: 30px;
     text-align: center;
-    font-size: 1.5em;
-    line-height: 1.5em;
+    font-size: 1.4rem;
+    line-height: 1.7rem;
 }
 
-/*End of Main - Profile Picture*/
-
-/*Main - Portfolio, Images and Paragraphs*/
-.port {
-    text-align: center;
-    padding-top: 100px;
-    padding-bottom: 100px;
-    text-transform: uppercase;
+.picture {
+    background-color:  rgb(219, 225, 228);
+    padding-bottom: 40px;
 }
 
 img {
@@ -98,23 +87,36 @@ img {
     margin: 0 auto;
 }
 
-h3  {
-    text-align: center;
-    padding-top: 30px;
-    font: 1.5em;
+.picture h2 {
+    margin-top: 0;
 }
 
-p {
+
+.portfolio, .port, .projects {
+    background-color: whitesmoke;
     text-align: center;
-    padding-top: 5px;
-    padding-bottom: 20px;
-    font: 1.5em;
-    line-height: 1.6em;
+    margin: 0 auto;
+    padding: 40px 10px 40px;
+
 }
 
-/*End of Main - Portfolio*/
+.projects h3 {
+    text-align: center;
+    padding-top: 25px;
+    font-size: 1rem;
+}
 
-/*Education and Skills Section for Extra Credit*/
+.projects p {
+    text-align: center;
+    padding: 5px 30px 20px;
+    font-size: 1rem;   
+    line-height: 1.6rem;
+}
+
+
+/*END OF MAIN - PROFILE SECTION*/
+
+/*MAIN - EDUCATION & SKILLS SECTION FOR EXTRA CREDIT*/
 .education-1, .skills-1, .items, .items-1 {
     font-family: 'Chewy', cursive;
 }
@@ -124,9 +126,9 @@ p {
 }
 
 .color {
-    border: 10px solid firebrick;
-    width: 95%;
-    margin: 15px;
+    border:10px solid firebrick;
+    width: 100%;
+    margin: 50px auto;
 }
 
 .education-1 {
@@ -163,25 +165,50 @@ p {
 }
 
 .hero:hover {
-    background-color: bisque;
-
+    filter: grayscale(1);
+    transform: scale(1.03);
+    animation: shake 0.7s;
+    animation-iteration-count: infinite;
+    cursor: pointer;
 }
 
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }
 
+/*END OF MAIN - EDUCATION & SKILLS SECTION FOR EXTRA CREDIT*/
 
-/*Education and Skills Section for Extra Credit End*/
-
-/*Footer*/
-.bottom {
-    background-color: rgb(219, 225, 228);
-    margin-top: 100px;
+/*CONTACT SECTION*/
+.contact {
+    text-align: center;
 }
-
-.bottom-1 {
+h3 {
     text-transform: uppercase;
 }
 
+h3, .contact {
+    font-size: 1.3rem;
+}
 
+.contact p {
+    padding: 25px 25px 0;
+    font-size: 1.3rem;
+    line-height: 1.7rem;
+}
+
+/*END OF CONTACT SECTION*/
+
+/*FOOTER SECTION*/
 footer, .footer-nav {
     display: flex;
 }
@@ -189,61 +216,56 @@ footer, .footer-nav {
 footer {
     justify-content: space-between;
     padding-bottom: 30px;
-    border-top: 1px solid rgb(168, 175, 182);
+    border-top: 1.5px solid grey;
 }
+
 .display {
     display: none;
 }
 
 .top {
-    padding-right: 20px;
+    padding-right: 15px;
+}
+footer h2 {
+    padding-left: 15px;
+}
+
+footer h2, footer ul {
+    margin-top: 40px;
+}
+
+footer li {
     text-transform: uppercase;
 }
 
-footer h4 {
-    padding-left: 20px;   
+footer h2, footer li {
+    font-size: 1rem;
 }
 
-.comm {
-    margin: -10px auto;
-}
+/*END OF FOOTER SECTION*/
 
-.comm-1 {
-    margin: -5px;
-    margin-bottom: 50px;
-}
-/*End of Footer*/
-
-
-
-/*Media Queries*/
-
+/*MEDIA QUERIES*/
 @media (min-width:768px) {
     nav, .main-nav {
         display: flex;
-        flex-direction: row;
-    }
+    }  
 
     nav {
         flex-direction: column;
-        text-align: center;
-    }
-
-    .main-nav {
-        margin: 0 0 16px;
-        padding-left: 200px;
-       
+        align-items: center;
     }
 
     .main-nav li {
         background-color: transparent;
-        width: auto;
         margin: 0 10px;
     }
 
-    .color {
-        margin-left: 25px;
-        margin-right: 50px;
+    .main-nav {
+        margin: 0 0 16px;
+    }
+
+    .main-nav, .main-nav li {
+        width: auto;
     }
 
     .picture {
@@ -254,11 +276,8 @@ footer h4 {
 
     .picture p {
         order: -1;
-    }
-
-    .picture p {
-        padding: 0 25px 0 30px;
-        margin-top: 0;
+        padding: 0 30px 0 30px;
+        margin-top: 5%;
         font-size: 20px;
     }
 
@@ -271,7 +290,7 @@ footer h4 {
         padding-bottom: 40px;
     }
 
-    .projects  {
+    .projects {
         display: flex;
         flex-wrap: wrap;
     }
@@ -279,72 +298,47 @@ footer h4 {
     .section {
         flex: 1 50%;
     }
-  
+
     .top {
         display: none;
     }
 
     .display {
         display: inline-block;
-        margin-right: 20px;
-        padding-top: 20px;
+        margin-left: 20px;
+        padding-right: 20px;   
     }
-    footer {
-        text-transform: uppercase;
-    } 
 
-    footer h4 {
+    footer h2 {
         padding-left: 20px;
     }
 
-
 }
 
-@media (min-width:1024px) { 
-    body {
-        background-color: rgb(219, 225, 228);
-    }
+@media (min-width:1024px) {
     nav {
         flex-direction: row;
     }
 
-    h1 {
-        padding-right: 89px;
+    nav .name {
+        margin: 0 auto 20px 0;
     }
 
-    nav {
-        margin: 50px auto 20px 0;
-    }
-    
     .picture {
-        width: 95%;
+        padding: 20px 40px 50px;
     }
 
-
-    .section {
-        flex-basis: 33%;
-    }
-
-    .color {
-        margin-left: -2px;
-    }
-
-    .projects,
-    .section,
     .port {
-        border: 10px solid rgb(255, 255, 255);
         width: 95%;
-        margin: 0;
+        margin: 0 auto;
         padding-bottom: 60px;
-        background-color:rgb(255, 255, 255);
     }
-    
+
     .section {
-        background-color: rgb(255, 255, 255);
+        flex-basis: 33.33%;   
     }
-    
-    footer {
-        text-transform: uppercase;
-    } 
 
 }
+
+
+
